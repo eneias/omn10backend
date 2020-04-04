@@ -14,6 +14,8 @@ app.use(express.json());
 app.use(routes);
 app.use('/favicon.ico', express.static('./favicon.ico'));
 
-app.listen(3333);
+app.listen(process.env.PORT || 3333, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
  

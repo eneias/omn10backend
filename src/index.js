@@ -12,6 +12,7 @@ mongoose.connect('mongodb+srv://eneias:bejameumijo@cluster0-jhhsp.mongodb.net/te
 app.use(cors());
 app.use(express.json());
 app.use(routes);
+app.use('/favicon.ico', express.static('./favicon.ico'));
 
 app.listen(3333);
 
